@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "configVersion": 1,
+  "scanTypes": [
+    {
+      "name": "Scan Work Order",
+      "location": "/mnt/PackingSlips",
+      "validationRegex": "^(?:WO-)",
+      "prefix": "",
+      "multiScan": true,
+      "Step1Title": "Step 1: Scan Work Order",
+      "Step2Title": "Step 2: Capture image of Work Order"
+    },
+    {
+      "name": "Scan Box Label",
+      "location": "/mnt/RetiredLabels",
+      "validationRegex": "^[1-9][0-9]*$",
+      "prefix": "BL",
+      "multiScan": false,
+      "Step1Title": "Step 1: Scan Box Label",
+      "Step2Title": "Step 2: Capture image of Box Label"
+    },
+    {
+      "name": "Scan Checklist",
+      "location": "/mnt/CompletedChecklist",
+      "validationRegex": "^(0[4-9]|^1[0-9]|2[0-9]|3[0-8])(0[1-9]|1[0-2])([0-9]){4,5}$",
+      "prefix": "CL",
+      "multiScan": false,
+      "Step1Title": "Step 1: Scan Checklist",
+      "Step2Title": "Step 2: Capture image of Checklist"
+    }
+  ]
+}
